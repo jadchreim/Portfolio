@@ -86,23 +86,30 @@ export const ResumeCard = ({
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
-          {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
+         {description && (
+  <motion.div
+    initial={{ opacity: 0, height: 0 }}
+    animate={{
+      opacity: isExpanded ? 1 : 0,
+      height: isExpanded ? "auto" : 0,
+    }}
+    transition={{
+      duration: 0.7,
+      ease: [0.16, 1, 0.3, 1],
+    }}
+    className="mt-2 text-xs sm:text-sm whitespace-pre-wrap"
+  >
+    {description
+      .split(/\n{2,}/g)
+      .map((paragraph, i) => (
+        <div key={i} className="mb-3">
+          {paragraph}
+        </div>
+      ))}
+  </motion.div>
+)}
 
-                height: isExpanded ? "auto" : 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="mt-2 text-xs sm:text-sm"
-            >
-              {description}
-            </motion.div>
-          )}
+
         </div>
       </Card>
     </Link>

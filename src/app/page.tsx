@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-
+import { Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Cake as CakeIcon } from 'lucide-react';
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -29,6 +29,8 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+             
+
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -49,6 +51,88 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+      <section id="details">
+  <BlurFade delay={BLUR_FADE_DELAY * 4}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+      {/* Phone - now clickable */}
+      <div>
+        <div className="flex items-center gap-2">
+          <PhoneIcon className="h-4 w-4" />
+          <Markdown className="font-semibold leading-none text-xs sm:text-sm">
+            Phone
+          </Markdown>
+        </div>
+        <a 
+          href={`tel:${DATA.contact.tel}`}
+          className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert hover:underline hover:text-primary transition-colors"
+        >
+          {DATA.contact.tel}
+        </a>
+      </div>
+
+      {/* Email - now clickable */}
+      <div>
+        <div className="flex items-center gap-2">
+          <MailIcon className="h-4 w-4" />
+          <Markdown className="font-semibold leading-none text-xs sm:text-sm">
+            Email
+          </Markdown>
+        </div>
+        <a 
+          href={`mailto:${DATA.contact.email}`}
+          className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert hover:underline hover:text-primary transition-colors"
+        >
+          {DATA.contact.email}
+        </a>
+      </div>
+
+      {/* Location with icon */}
+      <div>
+        <div className="flex items-center gap-2">
+          <MapPinIcon className="h-4 w-4" />
+          <Markdown className="font-semibold leading-none text-xs sm:text-sm">
+            Location
+          </Markdown>
+        </div>
+        <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          {DATA.location}
+        </p>
+      </div>
+
+      {/* Date of Birth with standardized format */}
+      <div>
+        <div className="flex items-center gap-2">
+          <CakeIcon className="h-4 w-4" />
+          <Markdown className="font-semibold leading-none text-xs sm:text-sm">
+            Date of Birth
+          </Markdown>
+        </div>
+        <p className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          June 27, 1993
+        </p>
+      </div>
+    </div>
+  </BlurFade>
+</section>
+
+      <section id="languages">
+  <div className="flex min-h-0 flex-col gap-y-3">
+    <BlurFade delay={BLUR_FADE_DELAY * 5}>
+      <h2 className="text-xl font-bold">Languages</h2>
+    </BlurFade>
+    {DATA.languages.map((lang, id) => (
+      <BlurFade
+        key={lang}
+        delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+      >
+        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {lang}
+          </Markdown>
+      </BlurFade>
+    ))}
+  </div>
+</section>
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -206,12 +290,12 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to connect? Just send me an email{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.Email.url}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  with a direct question
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.

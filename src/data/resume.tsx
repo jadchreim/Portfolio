@@ -1,42 +1,64 @@
 import { Icons } from "@/components/icons";
+import { language } from "gray-matter";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Jad Chreim",
   initials: "JC",
   url: "https://dillion.io",
-  location: "San Francisco, CA",
+  location: "Beirut, Lebanon",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "IT Support Specialist",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
-  skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
-    "C++",
-  ],
+    "With background in Finance and Customer Care, I had the opportunity to start a new career. My capacity to softly handle both hardware and software support systems allowed me to join the IT team within my current company and being in charge of essential IT responsibilities.",
+  avatarUrl: "/personal.jpeg",
+ skills: [
+  "ICBS (Integrated Computerized Banking System)",
+  "CollectSmart",
+  "SAP BusinessObject BI",
+  "MIS Reporting",
+  "WebService Integration",
+  "API Testing & Debugging",
+  "Data Security",
+  "System Integration Testing",
+  "Active Directory",
+  "Exchange Server",
+  "File Server Management",
+  "Backup & Recovery",
+  "Hardware & OS Troubleshooting",
+  "Software Configuration",
+  "Technical Support",
+  "Stakeholder Coordination",
+  "Requirement Gathering",
+  "Documentation",
+  "Problem-Solving",
+  "Data Protection",
+  "Secure API Handling",
+  "Database Management",
+  "Customer Care",
+  "Oracle RDBMS",
+  "Database Systems Modeling", 
+  "Oracle SQL",
+  "PL/SQL Programming",
+  "Oracle Forms",
+  "Oracle Report Builder",
+  "Database Security",
+  "User Authentication (Logon)"
+],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "jadchreim@hotmail.com",
+    tel: "+96181056950",
+    dob: "June 27, 1993",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://dub.sh/dillion-github",
-        icon: Icons.github,
+      Whatsapp: {
+        name: "whatsapp",
+        url: "https://wa.me/96181056950",
+        icon: Icons.whatsapp,
 
         navbar: true,
       },
@@ -47,136 +69,86 @@ export const DATA = {
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
+      Email: {
+        name: "Email",
+        url: 'mailto:jadchreim@hotmail.com',
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
 
+ languages: [
+  "English (Professional), French (Fluent), Arabic (Native)",
+  // "French (Fluent)",
+  // "Arabic (Native)"
+],
+
+
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Capital Finance Company S.A.L",
       badges: [],
-      location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      href: "https://groupcfc.com/",
+      location: "Lebanon",
+      title: "Customer Care Representative ",
+      logoUrl: "https://groupcfc.com/images/group-cfc-logo.png",
+      start: "March 2016",
+      end: "July 2021",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "",
     },
     {
-      company: "Shopify",
+      company: "Capital Finance Company S.A.L",
+      href: "https://groupcfc.com/",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      location: "Lebanon",
+      title: "IT Support Specialist",
+      logoUrl: "https://groupcfc.com/images/group-cfc-logo.png",
+      start: "July 2021",
+      end: "Present",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
-    },
-    {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
-      badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
-      description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    },
+      `• General administration of ICBS, CollectSmart, and SAP BusinessObject BI:\n\n` +
+`- ICBS (Integrated Computerized Banking System): A comprehensive platform for managing both front and back office operations in banks and financial institutions.\n` +
+`- CollectSmart: A web application tailored for recovery and collection teams to track, update, and action debtor accounts efficiently.\n` +
+`- SAP BusinessObject BI: Responsible for managing reports — including removing, modifying, and adding new reports for specific user groups.\n\n` +
+
+`• E-Wallet Project Participant (2024):\n\n` +
+`- Utilized WebService technology to ensure seamless communication between customers and the internal system.\n` +
+`- Conducted thorough testing and debugging to ensure correct data population in specified fields.\n` +
+`- Ensured API endpoints correctly mapped to corresponding database fields.\n` +
+`- Performed integration testing to validate system component interactions.\n` +
+`- Implemented robust security measures to safeguard user data and transactions.\n` +
+`- Enabled real-time issue tracking through structured logging of data flows.\n` +
+`- Coordinated with stakeholders for requirement gathering and progress updates.\n\n\n` +
+
+`• Extracted MIS reports as requested by business users.\n` +
+`• Ensured compliance of system hardware, OS, and software with organizational standards.\n` +
+`• Developed and maintained installation and configuration procedures.\n` +
+`• Performed daily backup operations — ensuring data integrity, media rotation, and offsite storage.\n` +
+`• Administered Active Directory, Exchange server, and file servers.\n` +
+`• Provided user training and technical support for IT-related issues.`
+
+    }
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
-    },
-    {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
+      school: "Université des Pères Antonines ",
+      href: "https://www.iau-aiu.net/?lang=fr",
+      degree: "Bachelor & Master’s degree in Banking & Finance",
+      logoUrl: "https://www.iau-aiu.net/local/cache-vignettes/L250xH132/arton1198-2bbe5.jpg?1675725373",
       start: "2012",
       end: "2016",
     },
+    {
+      school: "BML Istisharat Lebanon, Oracle Developer Track",
+      href: "https://www.istisharat.com/",
+      degree: "Introduction to Oracle RDBMS & Systems Modeling/ Oracle Intro to SQL/Oracle Program with PL/SQL - Oracle forms and report builder/Logon & Security",
+      logoUrl: "https://www.istisharat.com/assets/images/bml-logo.png",
+      start: "2023",
+      end: "2023",
+    }
   ],
   projects: [
     {
