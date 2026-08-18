@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -19,9 +20,14 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur-md dark:border-line-dark dark:bg-canvas-dark/85">
       <div className="mx-auto flex h-16 max-w-container items-center justify-between px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-[12px] font-bold text-white">
-            {profile.initials}
-          </span>
+          <Image
+            src={profile.logo.src}
+            alt={profile.logo.alt}
+            width={profile.logo.width}
+            height={profile.logo.height}
+            priority
+            className="shrink-0 object-contain"
+          />
           <span className="text-[15px] font-semibold tracking-tight text-ink dark:text-ink-dark">
             {profile.name}
           </span>

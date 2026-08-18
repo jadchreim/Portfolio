@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { profile, navItems, exploreLinks } from "@/lib/data";
 import { LinkedInIcon, MailIcon, PhoneIcon } from "./icons";
@@ -11,9 +12,13 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-[12px] font-bold text-white">
-                {profile.initials}
-              </span>
+              <Image
+                src={profile.logo.src}
+                alt={profile.logo.alt}
+                width={profile.logo.width}
+                height={profile.logo.height}
+                className="shrink-0 object-contain"
+              />
               <span className="text-[15px] font-semibold text-ink dark:text-ink-dark">
                 {profile.name}
               </span>

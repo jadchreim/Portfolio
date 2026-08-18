@@ -1,6 +1,12 @@
 export const profile = {
   name: "Jad Chreim",
   initials: "JC",
+  logo: {
+    src: "/jad-logo-1.png",
+    alt: "Jad Chreim JC logo",
+    width: 38,
+    height: 38,
+  },
   title: "IT Support Specialist",
   greeting: "Hi, I'm Jad",
   summary:
