@@ -7,11 +7,11 @@ export const profile = {
     "With a background in Finance and Customer Care, I had the opportunity to start a new career. My capacity to softly handle both hardware and software support systems allowed me to join the IT team within my current company and being in charge of essential IT responsibilities.",
   location: "Beirut, Lebanon",
   dob: "June 27, 1993",
-  phone: "+961 70 146 793",
+  phone: "+961 81 056 950",
   phoneHref: "tel:+96181056950",
   email: "jadchreim@hotmail.com",
   emailHref: "mailto:jadchreim@hotmail.com",
-  whatsapp: "https://wa.me/96170146793",
+  whatsapp: "https://wa.me/96181056950",
   linkedin: "https://www.linkedin.com/in/jad-chreim-056524346/",
 };
 
